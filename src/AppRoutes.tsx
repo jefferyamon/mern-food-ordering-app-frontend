@@ -2,11 +2,11 @@ import { Navigate, Route, Routes } from "react-router";
 import Layout from "./layouts/layout";
 import HomePage from "./pages/HomePage";
 import AuthCallbackPage from "./pages/AuthCallbackPage";
-import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoutes from "./auth/ProtectedRoutes";
 import ManageRestaurantPage from "./pages/ManageRestaurantPage";
 import SearchPage from "./pages/SearchPage";
 import DetailPage from "./pages/DetailPage";
+import OrderStatusPage from "./pages/OrderStatusPage";
 
 const AppRoutes = () => {
   return (
@@ -38,10 +38,10 @@ const AppRoutes = () => {
       />
       <Route element={<ProtectedRoutes />}>
         <Route
-          path="/user-profile"
+          path="/order-status"
           element={
             <Layout>
-              <UserProfilePage />
+              <OrderStatusPage />
             </Layout>
           }
         />
